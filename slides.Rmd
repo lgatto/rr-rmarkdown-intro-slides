@@ -85,8 +85,8 @@ computational projects.
 
 |                    | Same data | Different data |
 |--------------------|:---------:|:--------------:|
-| **Same code**      |  Repeat   |  Reproduce |
-| **Different code** |  Reproduce | **Replicate** |
+| **Same code**      |  Repeat   |  Reproduce     |
+| **Different code** | Reproduce |  Replicate     |
 
 
 Finally, **re-use** the information/knowledge from one experiment to run a different experiment with the aim to **confirm** results from scratch.
