@@ -1,0 +1,167 @@
+---
+title: "Rmarkdown for reproducible research"
+author: "Laurent Gatto"
+date: "1 July 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Learning Objectives
+
+- Understand the concept of reproducible research and reproducible
+  documents.
+- Undertand the process by which a source document in compiled into a
+  final report.
+- Generate a reproducible report in html or pdf from an Rmarkdown
+  document using RStudio.
+
+## References
+
+The *Reproducible research* chapter in the *Intoduction to
+Bioinformatics* course at http://bit.ly/WSBIM1207
+
+Direct link: https://uclouvain-cbio.github.io/WSBIM1207/sec-rr.html
+
+## Reproducible research 
+
+The table below summerises different levels of reproducible research focusing on data and code in
+computational projects.
+
+|                    | Same data | Different data |
+|--------------------|:---------:|:--------------:|
+| **Same code**      |           |       |
+| **Different code** |           |       |
+
+Reproducible research refers to research that can be reproduced under
+various conditions and by different people.
+
+## Reproducible research 
+
+The table below summerises different levels of reproducible research focusing on data and code in
+computational projects.
+
+|                    | Same data | Different data |
+|--------------------|:---------:|:--------------:|
+| **Same code**      |  **Repeat**|       |
+| **Different code** |           |       |
+
+
+**Repeat** my experiment, i.e. obtain the same tables/graphs/results using the same setup (data, software, ...) in the same lab or on the same computer. 
+
+## Reproducible research 
+
+The table below summerises different levels of reproducible research focusing on data and code in
+computational projects.
+
+|                    | Same data | Different data |
+|--------------------|:---------:|:--------------:|
+| **Same code**      |  Repeat   |  **Reproduce** |
+| **Different code** |  **Reproduce** |       |
+
+
+**Reproduce** an experiment (not ones own), i.e. obtain the same tables/graphs/results in a different lab or on a different computer, using the same or similar setup.
+
+## Reproducible research 
+
+The table below summerises different levels of reproducible research focusing on data and code in
+computational projects.
+
+|                    | Same data | Different data |
+|--------------------|:---------:|:--------------:|
+| **Same code**      |  Repeat   |  Reproduce |
+| **Different code** |  Reproduce | **Replicate** |
+
+
+**Replicate** an experiment, i.e. obtain the same (similar enough) tables/graphs/results in a different set up. 
+
+## Reproducible research 
+
+The table below summerises different levels of reproducible research focusing on data and code in
+computational projects.
+
+|                    | Same data | Different data |
+|--------------------|:---------:|:--------------:|
+| **Same code**      |  Repeat   |  Reproduce |
+| **Different code** |  Reproduce | **Replicate** |
+
+
+Finally, **re-use** the information/knowledge from one experiment to run a different experiment with the aim to **confirm** results from scratch.
+
+## Five selfish reasons
+
+There are many reasons to work reproducibly, and Markowetz (2015)
+nicely summarises 5 good reasons. Importantly, he stressed out that
+the first beneficiary of reproducible work are the student/research
+that apply these principles:
+
+1. Reproducibility helps to avoid disaster.
+2. Reproducibility makes it easier to write papers.
+3. Reproducibility helps reviewers see it your way.
+4. Reproducibility enables continuity of your work.
+5. Reproducibility helps to build your reputation.
+
+
+## `knitr` and `rmarkdown`
+
+- `knitr::knit` converts the `Rmd` into `md` by executing the code
+  chunks and replacing the code by its output (text, tables, figures,
+  ...).
+
+- The `md` file is then compiled into the desired [output
+  format](https://rmarkdown.rstudio.com/lesson-9.html) (typically html
+  or pdf) using `pandoc`.
+  
+- In practice, in R, these two steps are automatically handled in one
+  go by `rmarkdown::render()`.
+
+
+```{r rmarkdownflow, results='asis', fig.cap="The rmarkdown workflow (image from RStudio)", out.width = '100%', echo=FALSE, purl=FALSE}
+knitr::include_graphics("./figs/rmarkdownflow.png")
+```
+
+## Rmd
+
+An Rmarkdown (Rmd) document is composed of 
+
+- An optional YAML **header**, delimited by `---`. 
+
+- Text in [simple **markdown**
+  format](https://pandoc.org/MANUAL.html#pandocs-markdown).
+
+- One or more R **code chunks** delimited by three backticks. Each
+  code chunk can be uniquely named and parametrised with a set of code
+  chunk [options](http://yihui.name/knitr/options/).
+
+
+RStudio also supports
+[Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html)
+documents[^jupyter] that execute individual code chunks independently
+and display directly in the source document.
+
+
+## Additional features
+
+- Caching with `cache = TRUE`.
+
+- Interactive tables with `DT::datatable()`.
+
+- Packages and version with `sessionInfo()`.
+
+- RStudio also supports [Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html) documents that execute individual code chunks independently and display directly in the source document.
+
+
+## More 
+
+
+Using Rmarkdown, it is also possible to produce
+[slides](https://rmarkdown.rstudio.com/lesson-11.html),
+[websites](https://rmarkdown.rstudio.com/lesson-13.html), and
+[complete books](https://bookdown.org/), [interactive
+documents](https://rmarkdown.rstudio.com/lesson-14.html) and [R
+package vignettes](http://bioconductor.org/help/package-vignettes/).
+
+
