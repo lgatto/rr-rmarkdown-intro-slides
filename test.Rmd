@@ -42,7 +42,7 @@ library(DT)
 DT::datatable(cars)
 ```
 
-## Session inforation
+## Session information
 
 All packages and their versions used to generate this report are shown below.
 
