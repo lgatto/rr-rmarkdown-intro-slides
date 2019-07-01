@@ -93,7 +93,7 @@ Finally, **re-use** the information/knowledge from one experiment to run a diffe
 
 ## Five selfish reasons
 
-There are many reasons to work reproducibly, and Markowetz (2015)
+There are many reasons to work reproducibly, and [Markowetz (2015)](https://doi.org/10.1186/s13059-015-0850-7)
 nicely summarises 5 good reasons. Importantly, he stressed out that
 the first beneficiary of reproducible work are the student/research
 that apply these principles:
@@ -139,8 +139,8 @@ An Rmarkdown (Rmd) document is composed of
 
 RStudio also supports
 [Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html)
-documents[^jupyter] that execute individual code chunks independently
-and display directly in the source document.
+documents that execute individual code chunks independently and
+display directly in the source document.
 
 
 ## Additional features
